@@ -1,0 +1,153 @@
+ @media (max-width:500px) {
+     nav {
+         & {
+             overflow: visible;
+             width: auto;
+             height: auto;
+             top: 0;
+             position: absolute;
+             left: 0;
+             border-radius: 0;
+             box-shadow: none;
+             -webkit-border-radius: 0;
+             -moz-border-radius: 0;
+             -ms-border-radius: 0;
+             -o-border-radius: 0;
+         }
+         ul.dropList {
+             height: 0;
+             position: absolute;
+             .btn {
+                 & {
+                     position: fixed;
+                     z-index: 99999999;
+                     top: -22px;
+                     left: -24px;
+                     border-radius: 53%;
+                     width: 5rem;
+                     height: 5rem;
+                     padding: 36px 0;
+                     padding-left: 38px;
+                 }
+                 span {
+                     width: 20px;
+                     margin: 5px 0;
+                 }
+             }
+         }
+     }
+     nav ul.dropList.show {
+         & {
+             width: 100vw;
+             animation: none;
+             -webkit-animation: none;
+             height: 100vh;
+             border-radius: 0;
+             -webkit-border-radius: 0;
+             -moz-border-radius: 0;
+             -ms-border-radius: 0;
+             -o-border-radius: 0;
+             display: flex;
+             flex-wrap: wrap;
+             top: 0;
+             position: fixed;
+             left: 0;
+             align-content: center;
+             justify-content: center;
+             padding: 70px 15px;
+         }
+         li {
+             & {
+                 background-color: var(--main--color);
+                 width: 46%;
+                 height: 100px;
+                 margin: 5px;
+                 display: flex;
+                 justify-content: center;
+                 flex-wrap: wrap;
+                 align-content: center;
+                 border: 3px solid var(--main--color);
+                 color: #FFF;
+                 box-shadow: 0 0 15px var(--grayColor);
+             }
+             .icon {
+                 transition: none;
+                 text-align: center;
+                 position: static;
+                 width: auto;
+                 -webkit-transition: none;
+                 -moz-transition: none;
+                 -ms-transition: none;
+                 -o-transition: none;
+                 opacity: 1;
+                 width: 100%;
+                 i {
+                     transform: scale(1.4);
+                     -webkit-transform: scale(1.4);
+                     -moz-transform: scale(1.4);
+                     -ms-transform: scale(1.4);
+                     -o-transform: scale(1.4);
+                 }
+             }
+             span {
+                 & {
+                     display: inline-block;
+                     z-index: 999;
+                     opacity: 1;
+                     position: static;
+                     top: 0;
+                     margin-top: 15px;
+                     padding: 0;
+                     text-align: center;
+                     display: block;
+                 }
+                 &::before {
+                     display: none;
+                 }
+             }
+         }
+     }
+     section {
+         padding: 70px 15px !important;
+     }
+     section h2 {
+         font-size: 2rem !important;
+     }
+     section p {
+         font-size: .9rem !important;
+     }
+     section.home div.homeContent .text h2 {
+         font-size: 2rem;
+     }
+     section.home div.homeContent .text h2 span {
+         display: block;
+         height: 70px;
+         margin: 10px 0;
+     }
+     section.about .personalInfo .img {
+         border: none !important;
+     }
+     section.about .personalInfo .img img {
+         transform: none !important;
+         -webkit-transform: none !important;
+         -moz-transform: none !important;
+         -ms-transform: none !important;
+         -o-transform: none !important;
+     }
+     section.home div.homeContent .img {
+         display: none !important;
+     }
+     section.portfolio .swiper-container .swiper-slide span {
+         cursor: grab !important;
+     }
+     .swiper-container-horizontal>.swiper-pagination-bullets,
+     .swiper-pagination-custom,
+     .swiper-pagination-fraction {
+         top: 10px;
+         bottom: auto;
+     }
+     section.portfolio .swiper-container .swiper-slide {
+         width: 300px;
+         height: 400px;
+     }
+ }

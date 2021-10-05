@@ -1,0 +1,58 @@
+ // about
+ section.about {
+     & {
+         overflow: hidden;
+     }
+     .row .overlay {
+         background-color: #ffffff0d;
+     }
+     .card-pic {
+         & {
+             width: 400px;
+             height: 400px;
+             border: 7px solid map-get($map: $theme-colors, $key: 'redMag');
+         }
+         img {
+             transform: translate(-20px, -20px);
+             -webkit-transform: translate(-20px, -20px);
+             -moz-transform: translate(-20px, -20px);
+             -ms-transform: translate(-20px, -20px);
+             -o-transform: translate(-20px, -20px);
+         }
+     }
+     .card {
+         & {
+             transition: transform 1s ease-in-out;
+             margin: 15px 0;
+         }
+         .card-body {
+             transition: background-color .6s;
+         }
+         .card-body:hover {
+             background-color: #ffffff0d;
+         }
+     }
+     .content {
+         & {
+             transition: transform 1s ease-in-out;
+         }
+         h2 {
+             & {
+                 position: relative;
+                 text-align: center;
+                 width: 100%;
+                 margin-bottom: 40px;
+             }
+             &::after {
+                 content: '';
+                 position: absolute;
+                 bottom: -41px;
+                 left: 0;
+                 right: 0;
+                 margin: 0 auto 20px;
+                 width: 200px;
+                 border-bottom: 2px solid map-get($map: $theme-colors, $key: 'redMag');
+             }
+         }
+     }
+ }

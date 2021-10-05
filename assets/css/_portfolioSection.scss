@@ -1,0 +1,117 @@
+section.portfolio {
+    & {
+        position: absolute;
+        background-color: var(--grayColor);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15px;
+        padding-bottom: 50px;
+    }
+    .title {
+        & {
+            width: 100%;
+            text-align: center;
+            color: var(--whiteColor);
+            margin: 30px 0;
+            text-transform: uppercase;
+        }
+        h2 {
+            & {
+                width: 100%;
+                font-size: 3rem;
+                font-weight: 900;
+            }
+            span {
+                color: var(--main--color);
+            }
+        }
+        p {
+            & {
+                margin: 15px 0 15px 0;
+                position: relative;
+                display: inline-block;
+            }
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: -60px;
+                width: 40px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 2px;
+                background-color: var(--main--color);
+                display: block;
+            }
+            &::after {
+                right: -60px;
+                left: auto;
+            }
+        }
+    }
+    .swiper-container {
+        & {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            & {
+                background-position: center;
+                background-size: cover;
+                width: 400px;
+                height: 400px;
+                overflow: hidden;
+                position: relative;
+                box-shadow: 0 0 9px rgba(0, 0, 0, 0.452);
+            }
+            >a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 999;
+            }
+            >span {
+                position: absolute;
+                background-color: rgba(0, 0, 0, .8);
+                height: 100%;
+                width: 100%;
+                bottom: -400px;
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                h3 {
+                    font-weight: bold;
+                    color: #fff;
+                    text-transform: capitalize;
+                    margin: 15px 0;
+                    font-size: 1.5rem;
+                }
+                .properties {
+                    & {
+                        text-align: center;
+                    }
+                    span {
+                        display: block;
+                        color: #fff;
+                        margin: 10px 0;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: var(--main--color);
+        }
+        .swiper-slide-active {
+            // cursor: pointer;
+            &:hover span {
+                bottom: 0;
+            }
+        }
+    }
+}

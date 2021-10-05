@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script defer src="js/animation.js"></script>
+</head>
+
+<body style="position: relative;">
+    <!-- moving bg -->
+    <div class="vertical-centered-box" style="overflow: hidden">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+    </div>
+    <!--End moving bg -->
+    <header id="home" class="header section   bg-darkMag">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand col-4 d-lg-none " href="#">
+                <img src="assets/imgs/logo.png" alt="" style="width:50px;height: 50px;border-radius: 50%;">
+            </a>
+            <button id="btn-nav" class="navbar-toggler" style="z-index: 999999;" type="button" onclick="showCollapse()">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapseDiv hide" id="navbarSupportedContent">
+                <ul id="navPills" class="navbar-nav text-center   justify-content-center">
+                    <li onclick="active(0)" class="nav-item active my-lg-2  hvr-sweep-to-left">
+                        <a class="nav-link m" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li onclick="active(1)" class="nav-item my-lg-2 hvr-sweep-to-left">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li onclick="active(2)" class="nav-item my-lg-2 hvr-sweep-to-left">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li onclick="active(3)" class="nav-item my-lg-2 hvr-sweep-to-left">
+                        <a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li onclick="active(4)" class="nav-item my-lg-2 hvr-sweep-to-left">
+                        <a class="nav-link" href="#contacts">Contacts</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+        <div class="headerTitle text-white h-100  row justify-content-center align-content-center text-center col-12 text-capitalize   ">
+            <div class="align-self-center">
+                <h4 class="w-100 my-2 lead">Welcome to my world</h4>
+
+                <h2 id="wordAnim" class="text-redMag text-uppercase"><span id="cursor"></span></h2>
+
+            </div>
+        </div>
+        <div id="title" class=" border-bottom border-top shadow title " style="display: none;border-radius: 50px; ">
+            <ul class="social align-content-center justify-content-center">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </header>
+    <section id="about" class="about section row  justify-content-center align-content-center" style="height: 100vh;position: relative;">
+        <div class="col-6 row justify-content-center align-content-center">
+            <div class="card-pic">
+                <img src="assets/imgs/projects pics/1.jpg" alt="my pic" style="width: 100%;height: 100%;" />
+            </div>
+        </div>
+        <div class="col-lg-6 text-center justify-content-center row">
+            <div id="card" class="card shadow rounded-0  text-white bg-transparent" style="width: 20rem;">
+                <div class="overlay"></div>
+                <div class="card-body ">
+                    <ul class="list-group list-unstyled list-group-flush text-capitalize lead">
+                        <li class=" p-0 py-3 card-title text-capitalize border-bottom" style="font-size: 30px;"><span class="text-redMag">Heba Allah </span> Mahmoud</li>
+                        <li class=" p-0 py-3">Web developer</li>
+                        <li class=" p-0 py-3">26 years old</li>
+                        <li class=" p-0 py-3">Computer science </li>
+                        <li class=" p-0 py-3">Egyptian</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="skills" class="skills section h-auto row justify-content-center" style="position: relative;overflow: hidden;padding: 70px 0;">
+        <div class="overlay" style="background-color: rgb(108, 197, 245);opacity: .1;"></div>
+        <h1 class="text-center col-12 col-md-3 mb-5 text-dark py-2 skills-title bg-white">Skills</h1>
+        <div class="container-fluid row justify-content-center align-content-center py-md-5">
+            <div class="col-12"></div>
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row  justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>95%</div>
+                        <div style="text-transform: capitalize;">html</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>85%</div>
+                        <div style="text-transform: capitalize;">css</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>70%</div>
+                        <div style="text-transform: capitalize;">Javascript</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>80%</div>
+                        <div style="text-transform: capitalize;">bootstrap</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>50%</div>
+                        <div style="text-transform: capitalize;">angular</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+            <!-- circle progress card -->
+            <div class="skill-card col-md-4 col-lg-3 row justify-content-center align-content-center">
+                <div class="referral-credit-outer-circle shadow">
+                    <div class="percent">
+                        <div>80%</div>
+                        <div style="text-transform: capitalize;">sass</div>
+                    </div>
+                    <div id="percent" class="mask-referral-credit-inner-circle" style="height: 10%">
+                        <div class="referral-credit-inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of progress card -->
+
+            <script>
+                let skillCards = document.getElementsByClassName('skill-card');
+
+                for (let index = 0; index < skillCards.length; index++) {
+                    skillCards[index].children[0].children[1].style.height = skillCards[index].children[0].children[0].children[0].textContent
+                }
+            </script>
+
+        </div>
+    </section>
+    <section id="works" class="works section py-5 row">
+
+        <div class="container">
+            <div class="  row justify-content-center align-content-center">
+                <h2 class="col-lg-2 col-md-3 col-10 text-center my-5" style="color: #333;">Works</h2>
+                <div class="col-12"></div>
+                <!-- img ..-->
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/alexsmith.PNG" width="100%" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/bakery.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/bookmark.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/brands.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/crud.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/devolio.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/robon_still.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/sliderWebsite.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/studioSite.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/ui_ux.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4 work-img ">
+                    <a href="#" class="photo" target="_blank">
+
+                        <img src="assets/imgs/projects pics/movies.PNG" />
+                        <div class="glow-wrap">
+                            <i class="glow"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+    <section id="contacts" class="contacts section m-0" style="width: 100vw;">
+        <div class="container">
+            <h2 class="text-uppercase w-100 text-white text-center py-5">get <span class="text-redMag">in touch</span></h2>
+            <div class="row  justify-content-center">
+                <div class="col-md-6 text-white flex-column " style="width: 300px;padding: 15px;">
+                    <div class="my-4 lead">
+                        <label class="w-100 text-redMag">Phone</label>
+                        <span><i class=""></i> +201020917030</span>
+                    </div>
+                    <div class="my-4 lead">
+                        <label class="w-100 text-redMag">Email</label>
+                        <span><i class=""></i>mahmoudheba965@gmail.com</span>
+                    </div>
+                    <div class="my-4 lead">
+                        <label class="w-100 text-redMag">facebook</label>
+                        <span><i class=""></i>mahmoudheba63@gmail.com</span>
+                    </div>
+                    <div class="my-4 lead">
+                        <label class="w-100 text-redMag">Whats app</label>
+                        <span><i class=""></i>+201020917030</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form action="" class="p-3 m-0 row justify-content-center justify-content-md-between">
+                        <input style="height:40px;" class=" border-0 text-white shadow-lg col-md-5 bg-dark  rounded my-3 " type="text" class="form-control" placeholder="Name" />
+                        <input style="height:40px;" class=" border-0 text-white shadow-lg col-md-5 bg-dark  rounded my-3 " type="email" class="form-control" placeholder="Email" />
+                        <textarea class="col-12 bg-dark rounded my-3 border-0 text-white" placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn btn-redMag text-white col-7 mx-auto">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div id="toTop" class="scrollDiv" data-toggle="tooltip" data-placement="left" data-html="true" title="<span style='background:#fff'> To top </span>" style="cursor: pointer;left: auto;right: 50px;bottom: 50px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    display: none;
+    
+    
+    " onclick="window.scrollTo(0,0)">
+        <span style="animation: none;"></span>
+        <span style="animation: none;"></span>
+        <span style="animation: none;"></span>
+    </div>
+    <!-- important js  -->
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wordDeleteAnimation.js"></script>
+    <script src="js/js.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+</body>
+
+</html>

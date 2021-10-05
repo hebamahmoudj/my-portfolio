@@ -1,0 +1,207 @@
+body {
+    height: 2000px;
+    background: #fff
+}
+
+html {
+    overflow-x: hidden;
+}
+
+// overlay
+div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+// to scrol btn
+.scrollDiv {
+    & {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        right: 0;
+        top: 92vh;
+        margin: auto;
+        z-index: 999;
+    }
+    &:hover span {
+        border-color: map-get($map: $theme-colors, $key: 'redMag');
+    }
+    span {
+        & {
+            transition: border-color .4s;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            margin-top: -21px;
+            transform: rotate(45deg);
+        }
+    }
+    span:nth-child(1) {
+        animation: vibs 1s infinite alternate;
+    }
+    span:nth-child(2) {
+        animation: vibs .8s infinite;
+    }
+    span:nth-child(3) {
+        animation: vibs .6s infinite;
+    }
+}
+
+.scrollDiv:last-child {
+    animation: none !important;
+}
+
+.work-img {
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.photo {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, .2);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: -10px;
+}
+
+.photo:hover img {
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+    transform: scale(1.1);
+}
+
+.photo .glow-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+}
+
+.photo .glow {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, .2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-300px, -100px);
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover .glow {
+    transform: rotate(45deg) translate(300px, -100px);
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#counter {
+    background-color: map-get($map: $theme-colors, $key: 'redMag');
+}
+
+
+/* Ends */
+
+// skills
+.referral-credit-outer-circle {
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgba(190, 190, 190, 0.472);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mask-referral-credit-inner-circle {
+    & {
+        transform: rotate(180deg);
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        border-radius: 50%;
+    }
+}
+
+.referral-credit-inner-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    // background: map-get($map: $theme-colors, $key: 'redMag');
+    background-image: radial-gradient(#fff, map-get($map: $theme-colors, $key: 'redMag'));
+}
+
+.referral-credit-outer-circle {
+    .percent {
+        color: #333;
+        font-size: 30px;
+        position: absolute;
+        text-align: center;
+        padding-top: 40px;
+        width: 100%;
+        z-index: 1;
+        font-weight: bold;
+    }
+}
+
+#after-title {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    margin: auto;
+    width: 100%;
+    border-bottom: 3px solid map-get($map: $theme-colors, $key: 'redMag');
+}
+
+#before-title {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    margin: auto;
+    width: 50%;
+    border-bottom: 3px solid map-get($map: $theme-colors, $key: 'redMag');
+}
+
+.skills-title::before {
+    @extend #before-title;
+}
+
+.skills-title::after {
+    @extend #after-title;
+}
+
+// scroll bar
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #555;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 60%;
+    background-image: linear-gradient(transparent, map-get($map: $theme-colors, $key: 'redMag'));
+    border-radius: 20px;
+}

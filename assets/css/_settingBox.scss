@@ -1,0 +1,154 @@
+div.setting {
+    & {
+        position: fixed;
+        padding: 20px;
+        width: 200px;
+        background-color: var(--whiteColor);
+        right: -200px;
+        top: 30vh;
+        z-index: 9999999;
+    }
+    &.show {
+        right: 0;
+    }
+    .btn {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border: none;
+        margin-left: -70px;
+        background-color: var(--whiteColor);
+        color: var(--grayColor);
+        text-align: center;
+        font-size: 2rem;
+        padding: 0;
+    }
+    .btn span {
+        height: 100%;
+        animation: rotate 3s linear infinite;
+        -webkit-animation: rotate 3s linear infinite;
+        transition: background-color .5s;
+        -webkit-transition: background-color .5s;
+        -moz-transition: background-color .5s;
+        -ms-transition: background-color .5s;
+        -o-transition: background-color .5s;
+    }
+    .btn:hover,
+    .btn.active {
+        background-color: var(--main--color);
+        color: var(--whiteColor);
+    }
+    .btn::before {
+        display: none;
+    }
+    h4 {
+        color: var(--main--color);
+        text-align: center;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+    ul {
+        & {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        li {
+            & {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                cursor: pointer;
+                margin: 10px;
+                font-size: 3rem;
+                text-align: center;
+                color: var(--whiteColor);
+                opacity: .5;
+            }
+            &:hover,
+            &.active {
+                opacity: 1;
+            }
+        }
+        li:nth-child(1) {
+            color: #2196F3;
+        }
+        li:nth-child(2) {
+            color: #FF5D55;
+        }
+        li:nth-child(3) {
+            color: #82B440;
+        }
+        li:nth-child(4) {
+            color: #FFB400;
+        }
+    }
+    div.swipTheme {
+        & {
+            margin: 15px auto;
+            width: 60px;
+            height: 30px;
+            background-color: var(--grayColor);
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            border: 3px solid #999;
+            position: relative;
+            cursor: pointer;
+        }
+        &.day {
+            background-color: #fff;
+        }
+        span {
+            & {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 2px;
+                margin: auto;
+                display: block;
+                height: 20px;
+                width: 20px;
+                background: radial-gradient(#333, #888);
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+            &.right {
+                transform: translateX(30px);
+                -webkit-transform: translateX(30px);
+                -moz-transform: translateX(30px);
+                -ms-transform: translateX(30px);
+                -o-transform: translateX(30px);
+            }
+        }
+        i {
+            position: absolute;
+            font-size: 20px;
+            color: var(--blackColor);
+            font-weight: bold;
+        }
+        i:nth-child(1) {
+            left: -30px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+        i:nth-child(3) {
+            right: -30px;
+        }
+    }
+}

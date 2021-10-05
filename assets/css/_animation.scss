@@ -1,0 +1,96 @@
+// animation
+@keyframes down {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 300px;
+    }
+}
+
+@keyframes up {
+    0% {
+        height: 300px;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes toRight {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(4rem + 8px);
+        opacity: 1;
+    }
+    100% {
+        left: calc(4rem + 8px);
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        margin-left: 4.5rem;
+    }
+    75% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes showSec {
+    0% {
+        opacity: 0;
+        top: -200vh;
+        right: -200vw;
+    }
+    50% {
+        opacity: .9;
+        right: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        right: 0;
+    }
+}
+
+@keyframes hideSec {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        top: -200vh;
+        opacity: 0;
+    }
+    100% {
+        top: -200vh;
+        right: -200vw;
+        opacity: 0;
+    }
+}

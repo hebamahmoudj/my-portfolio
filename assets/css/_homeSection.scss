@@ -1,0 +1,132 @@
+// start home
+section.home {
+    & {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: var(--blackColor);
+        color: var(--whiteColor);
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+    }
+    div.homeContent {
+        & {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            vertical-align: middle;
+        }
+        .img {
+            & {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                overflow: hidden;
+                border: 10px solid var(--grayColor);
+                margin: 20px;
+                align-self: center;
+            }
+            .img {
+                position: absolute;
+            }
+        }
+        .text {
+            & {
+                max-width: 30rem;
+                margin: 30px;
+                height: auto;
+                padding: 3rem 0;
+                align-self: center;
+            }
+            >span {
+                text-transform: uppercase;
+                margin: 10px 0;
+                font-size: 1.1rem;
+                letter-spacing: 1.2px;
+            }
+            h2 {
+                & {
+                    transition: none;
+                    margin: 10px 0;
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                    -webkit-transition: none;
+                    -moz-transition: none;
+                    -ms-transition: none;
+                    -o-transition: none;
+                }
+                span {
+                    color: var(--main--color)
+                }
+            }
+            p {
+                transition: none;
+                margin: 10px 0;
+                line-height: 2;
+                font-size: 1.1rem;
+                -webkit-transition: none;
+                -moz-transition: none;
+                -ms-transition: none;
+                -o-transition: none;
+            }
+            .btns {
+                & {
+                    display: flex;
+                    justify-content: space-around;
+                    align-content: center;
+                    flex-wrap: wrap;
+                }
+                a {
+                    color: var(--whiteColor);
+                }
+                button.btn {
+                    & {
+                        margin: 6px 5px 6px 0;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                    &:hover {
+                        color: #fff !important;
+                    }
+                    i {
+                        margin: 0 5px;
+                    }
+                }
+                .btn.blue {
+                    & {
+                        background-color: var(--main--color);
+                        color: #fff;
+                    }
+                    &::before {
+                        background-color: #555555;
+                    }
+                }
+                .btn.gray {
+                    & {
+                        background-color: transparent;
+                        border-color: var(--main--color);
+                        color: var(--main--color);
+                    }
+                    &::before {
+                        background-color: var(--main--color);
+                    }
+                    &:hover span,
+                    &:hover a {
+                        color: #fff;
+                    }
+                    a {
+                        color: var(--main--color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end home

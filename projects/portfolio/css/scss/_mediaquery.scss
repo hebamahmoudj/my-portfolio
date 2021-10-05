@@ -1,0 +1,74 @@
+ // manual media
+ @media (max-width:991px) {
+     header.header {
+         .headerTitle h3 {
+             font-size: 30px;
+         }
+         .headerTitle h2 {
+             font-size: 30px !important;
+             height: 70px;
+         }
+     }
+     header.header .title {
+         display: none !important;
+     }
+     section.about {
+         & {
+             padding: 60px 0;
+             height: auto !important;
+         }
+         * {
+             margin-bottom: 20px;
+         }
+         .title {
+             & {
+                 display: none;
+             }
+             h2 {
+                 font-size: 38px;
+             }
+         }
+     }
+     .navbar-dark .navbar-toggler {
+         color: #fff;
+         border-color: rgba(255, 255, 255, 0.71);
+     }
+     nav {
+         background: #525252c9;
+     }
+     header.header nav .navbar-nav {
+         left: 0;
+         right: 0;
+         width: 100%;
+         top: 0 !important;
+         padding-bottom: 20px;
+         border: none !important;
+         background-color: transparent;
+     }
+     header.header nav .nav-item {
+         transform: none;
+     }
+     header.header nav .navbar-nav .nav-link {
+         padding: 18px 0;
+     }
+     .animatedShow {
+         animation: slideInLeft 1s forwards;
+     }
+     header.header nav .collapseDiv {
+         transition: transform 0.7s ease 0s;
+         transform-origin: top left;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         top: 68px;
+         left: 0;
+         background-color: rgba(51, 3, 3, 0.756);
+         overflow: hidden;
+     }
+     .show {
+         animation: show 1s forwards;
+     }
+     .hide {
+         animation: hide 1s forwards;
+     }
+ }

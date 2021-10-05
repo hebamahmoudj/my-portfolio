@@ -1,0 +1,23 @@
+section.works {
+    & {
+        overflow: hidden;
+        position: relative;
+        background: #00000085;
+        min-height: 100vh;
+    }
+    h2 {
+        position: relative;
+        background-color: #fff;
+        padding: 10px 0;
+    }
+    h2::after {
+        @extend #after-title;
+    }
+    h2::before {
+        @extend #before-title;
+    }
+    .work-img {
+        overflow: hidden;
+        height: 300px;
+    }
+}
